@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/flipping_gallery.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <!-- animsition.css -->
+  <link rel="stylesheet" href="css/animsition.min.css">
+  <!-- <link rel="stylesheet" href="css/media.css"> -->
+
+
+  <title>jquery plugins</title>
+</head>
+<body>
+  <section class="tiltpage">   
+    <div class="container">
+      <div class="row  m-auto">
+        <div class="col-12">
+         <div class="gallery">
+          <a href="#"><img src="images/m4.jpeg"></a>
+          <a href="#" ><img src="images/m5.jpeg"></a>
+          <a href="#" ><img src="images/m6.jpeg"></a>
+          <a href="#"><img src="images/m7.jpeg"></a>
+          <a href="#" ><img src="images/m8.jpeg"></a>
+          <a href="#" ><img src="images/m9.jpeg"></a>        
+        </div>
+      </div>
+    </div>
+    <!-- row end -->  
+  </div>
+</section>
+<section class="counter">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>jQuery Counter Up</h1>
+        <span class="num alert alert-danger">123456789</span>
+        <span class="num alert alert-warning" data-num="987654321"></span>
+      </div>
+    </div> 
+  </div>
+
+</section>
+
+<section class="owl">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div id="owl-demo" class="owl-carousel owl-theme">
+          <div class="item"> <img src="images/owl1.jpg"> </div>
+          <div class="item"> <img src="images/owl2.jpg">  </div>
+          <div class="item"> <img src="images/owl3.jpg">  </div>
+          <div class="item"> <img src="images/owl5.jpg"> </div>
+          <div class="item"> <img src="images/owl7.jpg">  </div>
+          <div class="item"> <img src="images/owl6.jpg"> </div>
+          <div class="item"><img src="images/owl8.jpg">  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  
+<section class="animsatihhon">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="animsition">
+          <a href="tiltpage.html" class="animsition-link custom-aminsition" data-animsition-out-class="fade-out-left"
+          data-animsition-out-duration="2000">Current</a>
+          <a class=" custom-aminsition"> |</a>
+          <a href="jquery2.html" class="animsition-link custom-aminsition" data-animsition-out-class="fade-out-left"
+          data-animsition-out-duration="2000">Next</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- jQuery links-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="js/jquery.flipping_gallery.js"></script>
+<script src="js/jquery.numscroll.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/owl.carousel.min.js"></script>
+<!-- animsition.js -->
+<script src="js/animsition.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  $(".gallery").flipping_gallery({
+    direction: "forward", // This is will set the flipping direction when the gallery is clicked. Options available are "forward", or "backward". The default value is forward.
+    selector: "> a", // This will let you change the default selector which by default, will look for <a> tag and generate the gallery from it. This option accepts normal CSS selectors.
+    spacing: 10, // You can set the spacing between each photo in the gallery here. The number represents the pixels between each photos. The default value is 10.
+    showMaximum: 15, // This will let you limit the number of photos that will be in the viewport. In case you have a gazillion photos, this is perfect to hide all those photos and limit only a few in the viewport.
+    enableScroll: true, // Set this to false if you don't want the plugin to override your scrolling behavior. The default value is true.
+    flipDirection: "bottom", // You can now set which direction the picture will flip to. Available options are "left", "right", "top", and "bottom". The default value is bottom.
+    autoplay: false // You can set the gallery to autoplay by defining the interval here. This option accepts value in milliseconds. The default value is false.
+  });
+   $(".num").numScroll();
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  $(".owl-carousel").owlCarousel();
+</script>
+
+</body>
+</html>
+
+

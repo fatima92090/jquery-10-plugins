@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- animsition.css -->
+  <link rel="stylesheet" href="css/animsition.min.css">
+  <link href="css/jquery.lightroom.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <!-- <link href="css/roundslider.min.css" rel="stylesheet" /> -->
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+
+  <title>jqery plugin</title>
+</head>
+<body>
+  <section class="animsatihhon">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="animsition">
+            <a href="tiltpage.html" class="animsition-link custom-aminsition" data-animsition-out-class="fade-out-left"
+            data-animsition-out-duration="2000">Current</a>
+            <a> |</a>
+            <a href="jquery2.html" class="animsition-link custom-aminsition" data-animsition-out-class="fade-out-left"
+            data-animsition-out-duration="2000">Next</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nanoglarrey mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">  
+         <div id="jLightroom" class="jlr gray_out">
+           <a href="https://unsplash.it/500/500?image=1013" data-lightbox="lb1" class="jlr_item"><img src="https://unsplash.it/500/500?image=1013" class="jlr_img" /></a>
+           <a href="https://unsplash.it/1200/600?image=1012" data-lightbox="lb1" class="jlr_item"><img src="https://unsplash.it/1200/600?image=1012" class="jlr_img" /></a>
+           <a href="https://unsplash.it/300/700?image=1011" data-lightbox="lb1" class="jlr_item"><img src="https://unsplash.it/300/700?image=1011" class="jlr_img" /></a>
+           <a href="https://unsplash.it/1000/400?image=1005" data-lightbox="lb1" class="jlr_item"><img src="https://unsplash.it/1000/400?image=1005" class="jlr_img" /></a>
+           <a href="https://unsplash.it/1000/400?image=1004" data-lightbox="lb1" class="jlr_item"><img src="https://unsplash.it/1000/400?image=1004" class="jlr_img" /></a>
+         </div> 
+
+       </div>
+     </div>
+   </div>
+ </section>
+
+
+<section class="mt-5 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+         <a class="btn-dark custom-btn" href="jquery3.html"> Next</a>
+      </div>
+    </div>
+  </div> 
+</section>
+ <!-- <section class="roundslid">
+   <div class="container">
+     <div class="row">
+       <div class="col-12">
+          <div class="types">
+        <h3>Slider Types</h3>
+        <div class="container">
+            <div class="control">
+                <div id="type"></div>
+            </div>
+            <div class="options">
+                <select id="Select1" onchange="sliderTypeChanged(this)" style="float: left;">
+                    <option>default</option>
+                    <option>min-range</option>
+                    <option>range</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="types">
+        <h3>Circle Shapes</h3>
+        <div class="container">
+            <div class="control">
+                <div id="shape"></div>
+            </div>
+            <div class="options">
+                <select id="type1" onchange="sliderShapeChanged(this)" style="float: left;">
+                    <option>full</option>
+                    <option>quarter-top-left</option>
+                    <option>quarter-top-right</option>
+                    <option>quarter-bottom-right</option>
+                    <option>quarter-bottom-left</option>
+                    <option>half-top</option>
+                    <option>half-bottom</option>
+                    <option>half-left</option>
+                    <option>half-right</option>
+                    <option>pie</option>
+                    <option>custom-half</option>
+                    <option>custom-quarter</option>
+                </select>
+            </div>
+        </div>
+    </div>
+       </div>
+     </div>
+   </div>
+ </section> -->
+
+
+
+
+ <!-- jQuery links-->
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+ <script src="js/jquery.lightroom.js"></script>
+
+  <!-- <script src="js/imagesloaded.pkgd.js"></script> 
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.lightroom.js"></script>
+  <script src="js/lightbox.min.js"></script> -->
+
+  <!-- <script src="js/roundslider.min.js"></script> -->
+
+  <!-- animsition.js -->
+  <script src="js/animsition.min.js"></script>   
+  <script src="js/script.js"></script>
+  <script>
+   $("#jLightroom").lightroom({
+    image_container_selector: ".jlr_item",
+    img_selector: "img.jlr_img",
+    img_class_loaded: "jlr_loaded",
+    img_space: 5,
+    img_mode: 'min',
+    init_callback: function(elem){$(elem).removeClass("gray_out")}
+  }).init();
+  //  $("#type").roundSlider({
+  //   value: 45,
+  // });
+  //  $("#shape").roundSlider({
+  //   value: 60,
+  //   sliderType: "min-range"
+  // });
+
+  //  function sliderTypeChanged(e) {
+  //   $("#type").roundSlider({ sliderType: e.value });
+  // }
+  // function sliderShapeChanged(e) {
+  //   var options = { circleShape: e.value };
+  //   if (e.value == "pie") options["startAngle"] = 0;
+  //   else if (e.value == "custom-quarter" || e.value == "custom-half") options["startAngle"] = 45;
+  //   $("#shape").roundSlider(options);
+  // }
+
+
+</script>
+</body>
+</html>
